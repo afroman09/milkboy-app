@@ -1,0 +1,20 @@
+body {
+    background-color: aqua;
+}
+
+#text-box {
+    margin: 0 auto;
+    background-color: blanchedalmond;
+    width: 300px;
+    height: 100px;
+    margin-bottom: 100px;
+
+}
+
+#box {
+    margin: 0 auto;
+    background-color: black;
+    width: 300px;
+    height: 200px;
+    vertical-align: middle;
+}
