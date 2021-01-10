@@ -1,8 +1,3 @@
-// boxがクリックされたらランダムなテキストを表示
-document.getElementById("box").onclick = function () {
-  console.log("今" + firstMessage[firstMessageNumber] + "をいただきました〜");
-};
-
 // 要素の取得完了
 // やること
 // boxがクリックされたらランダムなテキストを変えす
@@ -11,9 +6,20 @@ document.getElementById("box").onclick = function () {
 // 画面に描画する時に、時間差をつける
 // 画像の表示
 
+// boxがクリックされたらランダムなテキストを表示
+document.getElementById("box").onclick = function message() {
+  firstMessage(),
+  secondMessage(),
+  thirdMessage();
+};
 
-// 文字列の保存
-const firstMessage = [
+// firstMessage
+function firstMessage() {
+  console.log("あ〜、ありがとうございますぅ〜");
+}
+
+// secondMessage
+const secondeMessage = [
   "寝台列車一両",
   "いびきを止めるテープ",
   "子守唄の楽譜",
@@ -27,4 +33,20 @@ const firstMessage = [
 ];
 
 // 文字列をランダムに取得
-const firstMessageNumber = Math.floor(Math.random() * firstMessage.length);
+const secondeMessageNumber = Math.floor(Math.random() * secondeMessage.length);
+
+function secondMessage() {
+  setTimeout(() => {
+    console.log(
+      "今" + secondeMessage[secondeMessageNumber] + "をいただきました〜"
+    );
+  }, 3000);
+}
+
+// thirdMessage (thirdTextが実行された後に実行)
+
+function thirdMessage() {
+  setTimeout(() => {
+    console.log("こんなんなんぼあってもいいですからね");
+  }, 5000);
+}
