@@ -8,9 +8,7 @@
 
 // boxがクリックされたらランダムなテキストを表示
 document.getElementById("box").onclick = function message() {
-  firstMessage(),
-  secondMessage(),
-  thirdMessage();
+  firstMessage(), secondMessage(), thirdMessage();
 };
 
 // firstMessage
@@ -19,7 +17,7 @@ function firstMessage() {
 }
 
 // secondMessage
-const secondeMessage = [
+const secondMessageText = [
   "寝台列車一両",
   "いびきを止めるテープ",
   "子守唄の楽譜",
@@ -33,20 +31,30 @@ const secondeMessage = [
 ];
 
 // 文字列をランダムに取得
-const secondeMessageNumber = Math.floor(Math.random() * secondeMessage.length);
+const secondMessageNumber = Math.floor(Math.random() * secondMessageText.length);
 
 function secondMessage() {
   setTimeout(() => {
     console.log(
-      "今" + secondeMessage[secondeMessageNumber] + "をいただきました〜"
+      "今、" + secondMessageText[secondMessageNumber] + "をいただきました〜"
     );
   }, 3000);
 }
 
 // thirdMessage (thirdTextが実行された後に実行)
 
+const thirdMessageText = [
+  "こんなんなんぼあってもいいですからね",
+  "こんなんなんぼあってもいいですからね",
+  "チャンジャお前は",
+  "お前みたいなやつはいまだチャプチェみたことない",
+  "チャンジャえられへん",
+];
+
+const thirdMessageNumber = Math.floor(Math.random() * thirdMessageText.length);
+
 function thirdMessage() {
   setTimeout(() => {
-    console.log("こんなんなんぼあってもいいですからね");
+    console.log(thirdMessageText[thirdMessageNumber]);
   }, 5000);
 }
