@@ -1,25 +1,8 @@
-// 返されたテキストを取得して画面に反映させる処理
-// 画面に描画する時に、時間差をつける
-// 画像の表示
-
-// HTMLに取得した値を渡す
-// htmlで書くメッセージの格納先IDを定義し、
-// それぞれの関数の結果をそのIDにぶち込んで表示させる.
-
-// boxがクリックされたらランダムなテキストを表示
-// document.getElementById("box").onclick = function message() {
-//   firstMessage(), secondMessage(), thirdMessage();
-// };
-
-// test
-
+// btnがクリックされたらランダムなテキストを表示
 document.getElementById("btn").onclick = 
-// document.getElementById("text-box").innerHTML = message();
 function message() {
   firstMessage(), secondMessage(), thirdMessage();
 };
-
-
 
 // firstMessage
 function firstMessage() {
@@ -50,13 +33,10 @@ function secondMessage() {
   setTimeout(() => {
     text = "今、" + secondMessageText[secondMessageNumber] + "をいただきました〜"
     document.getElementById("secondText").innerHTML = text;
-    // console.log(
-    //   "今、" + secondMessageText[secondMessageNumber] + "をいただきました〜"
-    // );
-  }, 3000);
+  }, 2000);
 }
 
-// thirdMessage (thirdTextが実行された後に実行)
+// thirdMessage
 
 const thirdMessageText = [
   "こんなんなんぼあってもいいですからね",
@@ -71,6 +51,5 @@ function thirdMessage() {
   setTimeout(() => {
     text = thirdMessageText[thirdMessageNumber];
     document.getElementById("thirdText").innerHTML = text;
-    // console.log(thirdMessageText[thirdMessageNumber]);
-  }, 5000);
+  }, 4000);
 }
