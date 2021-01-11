@@ -31,7 +31,7 @@ const secondMessageNumber = Math.floor(
 
 function secondMessage() {
   setTimeout(() => {
-    text = "今、" + secondMessageText[secondMessageNumber] + "をいただきました〜"
+    text = "今、" + secondMessageText[secondMessageNumber] + "をいただきました〜";
     document.getElementById("secondText").innerHTML = text;
   }, 2000);
 }
@@ -45,11 +45,16 @@ const thirdMessageText = [
   "チャンジャえられへん",
 ];
 
-const thirdMessageNumber = Math.floor(Math.random() * thirdMessageText.length);
+// const thirdMessageNumber = thirdMessageText.length;
+// secondMessageが"寝台列車一両"[0]だった場合、チャンジャお前はを表示
 
 function thirdMessage() {
   setTimeout(() => {
-    text = thirdMessageText[thirdMessageNumber];
-    document.getElementById("thirdText").innerHTML = text;
+    // text = thirdMessageText[thirdMessageNumber];
+    if(secondMessage([secondMessageNumber]) === secondMessage(secondMessageNumber[0])) {
+      document.getElementById("thirdText").innerHTML = thirdMessageText[1];
+    }else {
+      document.getElementById("thirdText").innerHTML = thirdMessageText[0, 3, 4];
+    };
   }, 4000);
 }
