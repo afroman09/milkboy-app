@@ -5,8 +5,7 @@ document.getElementById("btn").onclick = function message() {
 
 // firstMessage
 function firstMessage() {
-  text = "あ〜、ありがとうございます〜";
-  document.getElementById("firstText").innerHTML = text;
+  document.getElementById("firstText").innerHTML = "あ〜、ありがとうございます〜";
 }
 
 // secondMessage
@@ -30,9 +29,7 @@ const secondMessageNumber = Math.floor(
 
 function secondMessage() {
   setTimeout(() => {
-    text =
-      "今、" + secondMessageText[secondMessageNumber] + "をいただきました〜";
-    document.getElementById("secondText").innerHTML = text;
+    document.getElementById("secondText").innerHTML = "今、" + secondMessageText[secondMessageNumber] + "をいただきました〜";
   }, 2000);
 }
 
@@ -53,9 +50,10 @@ function thirdMessage() {
     if (secondMessageText[secondMessageNumber] == secondMessageText[0]) {
       document.getElementById("thirdText").innerHTML = thirdMessageText[1];
     } else {
-      document.getElementById("thirdText").innerHTML =thirdMessageText[thirdMessageNumber];
+      document.getElementById("thirdText").innerHTML =
+        thirdMessageText[thirdMessageNumber];
     }
   }, 4000);
 }
 
-// classを使用し、userが入力したアタイに対しての返答ができるようにする
+// classを使用し、userが入力したtextに対しての返答ができるようにする
