@@ -50,10 +50,12 @@ const thirdMessageNumber = Math.floor(Math.random() * thirdMessageText.length);
 // secondMessageが"寝台列車一両"[0]だった場合、チャンジャお前はを表示
 function thirdMessage() {
   setTimeout(() => {
-    if (secondMessageText[secondMessageNumber] === secondMessageText[0]) {
+    if (secondMessageText[secondMessageNumber] == secondMessageText[0]) {
       document.getElementById("thirdText").innerHTML = thirdMessageText[1];
     } else {
       document.getElementById("thirdText").innerHTML =thirdMessageText[thirdMessageNumber];
     }
   }, 4000);
 }
+
+// classを使用し、userが入力したアタイに対しての返答ができるようにする
