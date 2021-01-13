@@ -1,8 +1,3 @@
-// btnがクリックされたらランダムなテキストを表示
-// document.getElementById("btn").onclick = function message() {
-//   firstMessage(), secondMessage(), thirdMessage();
-// };
-
 const usertext = document.getElementById("text");
 
 document.getElementById("btn").onclick = function() {
@@ -33,6 +28,31 @@ const thirdMessageText = [
 ];
 
 const thirdMessageNumber = Math.floor(Math.random() * thirdMessageText.length);
+
+
+// 過去
+// btnがクリックされたらランダムなテキストを表示
+// document.getElementById("btn").onclick = function message() {
+//   firstMessage(), secondMessage(), thirdMessage();
+// };
+
+// テキストで受け取った文字列を取得
+// document.getElementById("btn").onclick = function message() {
+//   firstMessage(), secondMessage(), thirdMessage();
+// };
+
+// function firstMessage() {
+//   document.getElementById("firstText").innerHTML = "あ〜、ありがとうございます〜";
+// }
+
+// const thirdMessageText = [
+//   "こんなんなんぼあってもいいですからね",
+//   "チャンジャお前は",
+//   "お前みたいなやつはいまだチャプチェみたことない",
+//   "チャンジャえられへん",
+// ];
+
+// const thirdMessageNumber = Math.floor(Math.random() * thirdMessageText.length);
 
 // secondMessage
 // const secondMessageText = [
