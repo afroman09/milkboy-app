@@ -93,5 +93,3 @@ const thirdMessageNumber = Math.floor(Math.random() * thirdMessageText.length);
 //     }
 //   }, 4000);
 // }
-
-// classを使用し、userが入力したtextに対しての返答ができるようにする
